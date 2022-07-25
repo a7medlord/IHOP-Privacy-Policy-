@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<h1 id="status">Thanks</h1>
+	<h4 id="message">Thanks</h4>
+
+
+    <script>
+
+        const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+const statusParam = urlParams.get('status');
+const messageParam = urlParams.get('message');
+
+document.getElementById('status').innerHTML = "Status: "+ statusParam;
+document.getElementById('message').innerHTML = "Message: " + messageParam;
+
+
+    </script>
+</body>
+</html>
