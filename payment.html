@@ -28,8 +28,8 @@
 const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
-const amountParam = urlParams.get('amount')
-const descriptionParam = urlParams.get('description')
+var amountParam = urlParams.get('amount') ?? 100
+var descriptionParam = urlParams.get('description') ?? 'Invoce'
 
 
         Moyasar.init({
