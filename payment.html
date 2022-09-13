@@ -55,8 +55,8 @@ var descriptionParam = urlParams.get('description') ?? 'Invoce'
             description: descriptionParam,
     
             // Required
-            // old test publishable_api_key 'pk_test_SfoxjV6J4A6ousXBLSDE5WrNYTuhVCP1zk1V6DfY'
-            publishable_api_key: 'pk_live_GjXs4MP8aNNWUWS2XozUFkSmFLEkZs4xo8VYCbuC',
+            // live key publishable_api_key  'pk_live_GjXs4MP8aNNWUWS2XozUFkSmFLEkZs4xo8VYCbuC'
+            publishable_api_key: 'pk_test_SfoxjV6J4A6ousXBLSDE5WrNYTuhVCP1zk1V6DfY',
     
             // Required
             // This URL is used to redirect the user when payment process has completed
@@ -68,8 +68,14 @@ var descriptionParam = urlParams.get('description') ?? 'Invoce'
             // Default: ['creditcard', 'applepay', 'stcpay']
             methods: [
                 'creditcard',
-                'stcpay'
+                'stcpay',
+                'applepay'
             ],
+    apple_pay: {
+        country: 'SA',
+        label: 'Awesome Cookie Store',
+        validate_merchant_url: 'https://api.moyasar.com/v1/applepay/initiate',
+    }
         });
     </script>
 
