@@ -73,7 +73,7 @@ var descriptionParam = urlParams.get('description') ?? 'Invoce'
             ],
     apple_pay: {
         country: 'SA',
-        label: 'Awesome Cookie Store',
+        label: descriptionParam,
         validate_merchant_url: 'https://api.moyasar.com/v1/applepay/initiate',
     }
         });
